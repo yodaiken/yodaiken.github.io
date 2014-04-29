@@ -1,0 +1,5 @@
+name: "aaron yodaiken"
+description: ""
+
+markdown: rdiscount
+permalink: pretty

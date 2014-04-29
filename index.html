@@ -1,11 +1,21 @@
-<!doctype html>
-<html>
-<head>
-	<title>Aaron Yodaiken</title>
-</head>
-<body>
-	<h1>Aaron Yodaiken</h1>
-	<hr>
-	<a href="mailto:aaronryodaiken@gmail.com">aaronryodaiken@gmail.com</a>
-</body>
-</html>
+---
+layout: default
+title: "Aaron Yodaiken"
+---
+<article class="hp">
+	<header>
+		<h1>
+			<span><a href="/"><span>Aaron Yodaiken</span></a> is a <a href="http://www.studentaffairs.columbia.edu/scholars/named" target="_blank"><span>John Jay Scholar</span></a> at Columbia University in NYC, the President of <a href="http://www.realitystep.org/" target="_blank"><span>RealityStep</span></a> and a professional web consultant.
+		</h1>
+	</header>
+</article>
+<article class="posts">
+	{% for post in site.posts %}
+		<div class="post" onclick="window.location='{{ post.url }}'">
+			<h2><a href="{{post.url}}"><span>{{post.title}}</span></a></h2>
+			<p>
+				{{post.excerpt | remove: '<p>' | remove: '</p>'}} <a href="{{post.url}}" class="readmore"><span>Full article &#8674;</span></a>
+			</p>
+		</div>
+	{% endfor %}
+</article>
